@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0a0a0f;
+    --foreground: #ffffff;
+    --card: #111116;
+    --card-foreground: #ffffff;
+    --popover: #13131a;
+    --popover-foreground: #ffffff;
+    --primary: #00F0FF;
+    --primary-foreground: #000000;
+    --secondary: #E55CFF;
+    --secondary-foreground: #ffffff;
+    --muted: #1f1f23;
+    --muted-foreground: #a1a1aa;
+    --accent: #1f1f23;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #f8fafc;
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #00F0FF;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Grid Background for the futuristic look */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
