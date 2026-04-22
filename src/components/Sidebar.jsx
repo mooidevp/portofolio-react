@@ -4,7 +4,7 @@ export default function Sidebar() {
   return (
     <aside className="w-64 border-r border-[#1f1f23] bg-[#0a0a0f] text-gray-400 fixed h-screen top-0 left-0 flex flex-col items-center py-10 z-50">
       <div className="mb-12">
-        <h1 className="text-xl font-bold font-mono tracking-tighter text-white">NEOM<span className="text-primary">_</span>ARCHITECT</h1>
+        <h1 className="text-xl font-bold font-poppins tracking-tighter text-white">Mooi<span className="text-primary"></span>Dev</h1>
         <p className="text-[10px] text-primary mt-1 uppercase tracking-widest text-center">SYSTEM_INITIALIZED</p>
       </div>
 
