@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { supabase } from '../lib/supabase'
-import { Send, Terminal } from 'lucide-react'
+import { Send, Mail } from 'lucide-react' // <-- Cuman 2 ini doang yang di-import, dijamin aman!
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: '', project_overview: '' })
@@ -26,7 +26,6 @@ export default function ContactSection() {
   return (
     <section id="transmission" className="py-20 mb-20">
       <div className="bg-[#0a0a0a] border border-[#1f1f23] rounded-xl p-8 md:p-14 flex flex-col md:flex-row gap-12 relative overflow-hidden">
-        {/* Decorative subtle gold glow */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
         
         <div className="flex-1 space-y-8 z-10">
@@ -40,18 +39,37 @@ export default function ContactSection() {
           </p>
           
           <div className="space-y-5 pt-6 border-t border-[#1f1f23]">
-            <div className="flex items-center text-sm text-gray-300 font-mono tracking-wider">
-              <div className="w-8 h-8 rounded bg-[#111] border border-[#D4AF37]/20 flex items-center justify-center mr-4">
-                <div className="w-2 h-2 bg-[#D4AF37] rounded-sm rotate-45 shadow-[0_0_5px_#D4AF37]"></div>
+            
+            {/* Email Moidev */}
+            <a href="mailto:hello@moidev.com" className="flex items-center text-sm text-gray-300 font-mono tracking-wider hover:text-[#D4AF37] transition-colors w-fit group">
+              <div className="w-8 h-8 rounded bg-[#111] border border-[#D4AF37]/20 flex items-center justify-center mr-4 group-hover:border-[#D4AF37]">
+                <Mail className="w-4 h-4 text-[#D4AF37]" />
               </div>
-              director@neomarchitect.io
-            </div>
-            <div className="flex items-center text-sm text-gray-300 font-mono tracking-wider">
-              <div className="w-8 h-8 rounded bg-[#111] border border-[#D4AF37]/20 flex items-center justify-center mr-4">
-                <Terminal className="w-4 h-4 text-[#D4AF37]" />
+              hello@moidev.com
+            </a>
+
+            {/* Instagram Moidev - Pake Raw SVG Anti Error */}
+            <a href="https://instagram.com/moidev" target="_blank" rel="noreferrer" className="flex items-center text-sm text-gray-300 font-mono tracking-wider hover:text-[#D4AF37] transition-colors w-fit group">
+              <div className="w-8 h-8 rounded bg-[#111] border border-[#D4AF37]/20 flex items-center justify-center mr-4 group-hover:border-[#D4AF37]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#D4AF37]">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
               </div>
-              Encrypted Node [X-09]
-            </div>
+              @moidev
+            </a>
+
+            {/* TikTok Moidev - Pake Raw SVG Anti Error */}
+            <a href="https://tiktok.com/@moidev" target="_blank" rel="noreferrer" className="flex items-center text-sm text-gray-300 font-mono tracking-wider hover:text-[#D4AF37] transition-colors w-fit group">
+              <div className="w-8 h-8 rounded bg-[#111] border border-[#D4AF37]/20 flex items-center justify-center mr-4 group-hover:border-[#D4AF37]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-[#D4AF37]" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-1.15 4.38-2.9 5.8-1.74 1.43-4.06 2.06-6.31 1.63-2.25-.43-4.22-1.77-5.46-3.6-1.24-1.84-1.57-4.2-.95-6.36.62-2.16 2.16-3.95 4.16-4.9 2.01-.95 4.41-1.03 6.47-.23v4.09c-1.07-.63-2.42-.7-3.55-.22-1.13.48-1.99 1.48-2.24 2.67-.25 1.19.1 2.45.93 3.32.83.87 2.1 1.25 3.28 1.02 1.18-.23 2.16-1.05 2.58-2.17.29-.78.34-1.63.34-2.46V0h-3.41z"/>
+                </svg>
+              </div>
+              @moidev
+            </a>
+
           </div>
         </div>
 
